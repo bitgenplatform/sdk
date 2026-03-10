@@ -21,8 +21,11 @@ export class HttpClient {
   private readonly headers: Record<string, string>
 
   constructor(config: BitgenConfig) {
-    if (config.env === 'localhost') {
-      const port = config.port ?? 3000
+    if (config.host) {
+      const port = config.port ?? 80
+      this.baseUrl = `http://${config.host}:${port}`
+    } else if (config.env === 'localhost') {
+      const port = config.port ?? 80
       this.baseUrl = `http://localhost:${port}`
     } else {
       this.baseUrl = BASE_URLS[config.env ?? 'production']

@@ -3,13 +3,10 @@
 export type BitgenEnv = 'sandbox' | 'production' | 'localhost'
 
 export interface BitgenConfig {
-  /** BITGEN-Scope header (UUID) */
   scope: string
-  /** Api-key header */
   apiKey: string
-  /** Target environment — defaults to 'production' */
   env?: BitgenEnv
-  /** Port used when env is 'localhost' — defaults to 3000 */
+  host?: string
   port?: number
 }
 

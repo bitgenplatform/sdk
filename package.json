@@ -1,6 +1,6 @@
 {
   "name": "@bitgen/sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "author": "BITGEN",
   "description": "Official Node.js SDK for the BITGEN API v3",
