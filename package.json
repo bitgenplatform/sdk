@@ -31,11 +31,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitgenplatform/sdk.git"
+    "url": "https://github.com/bitgenplatform/sdk-js.git"
   },
-  "homepage": "https://github.com/bitgenplatform/sdk#readme",
+  "homepage": "https://github.com/bitgenplatform/sdk-js#readme",
   "bugs": {
-    "url": "https://github.com/bitgenplatform/sdk/issues"
+    "url": "https://github.com/bitgenplatform/sdk-js/issues"
   },
   "engines": {
     "node": ">=18.0.0"
