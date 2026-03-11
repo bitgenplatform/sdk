@@ -21,10 +21,10 @@ apiKey: 'YOUR_API_KEY'
 
 ## Environments
 
-| env | Base URL |
-|-----|----------|
-| `production` | `https://api.bitgen.com` |
-| `sandbox` | `https://api.btgn.dev` |
+| env           |
+|---------------|
+| `production`  |
+| `sandbox`     |
 
 ```ts
 // Custom host (e.g. Docker container)
