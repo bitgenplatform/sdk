@@ -22,19 +22,3 @@ export class BitgenError extends Error {
     this.apiMessage = body.message
   }
 }
-
-/**
- * Special error for the POST /api/v3/tx endpoint which returns
- * raw HTTP 500 / 400 with a plain text body (not JSON-wrapped).
- */
-export class BitgenRawError extends Error {
-  readonly status: number
-  readonly rawBody: string
-
-  constructor(status: number, rawBody: string) {
-    super(rawBody)
-    this.name = 'BitgenRawError'
-    this.status = status
-    this.rawBody = rawBody
-  }
-}

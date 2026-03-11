@@ -14,10 +14,6 @@ export class TransactionResource {
 
   /**
    * Create a crypto withdrawal transaction.
-   *
-   * ⚠ This endpoint throws `BitgenRawError` (not `BitgenError`) for
-   * HTTP 500 (invalid_asset) and HTTP 400 (missing field) — both return
-   * a plain text body, not a JSON error object.
    */
   create(params: CreateTransactionParams): Promise<CreatedTransaction> {
     return this.http.post<CreatedTransaction>(

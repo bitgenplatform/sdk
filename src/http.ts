@@ -1,5 +1,5 @@
 import type { BitgenConfig } from './types/index.js'
-import { BitgenError, BitgenRawError } from './error.js'
+import { BitgenError } from './error.js'
 
 const BASE_URLS: Record<string, string> = {
   sandbox: 'https://api.btgn.dev',
@@ -59,7 +59,12 @@ export class HttpClient {
     // Handle raw HTTP errors (POST /api/v3/tx exception documented in API)
     if (rawErrors && (response.status === 500 || response.status === 400)) {
       const text = await response.text()
-      throw new BitgenRawError(response.status, text.trim())
+      throw new BitgenError(response.status, {
+        module: 'create',
+        service: 'transaction',
+        code: response.status,
+        message: text.trim(),
+      })
     }
 
     // 204 No Content — no body to parse

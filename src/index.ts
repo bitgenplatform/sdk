@@ -1,5 +1,5 @@
 export { BitgenClient } from './client.js'
-export { BitgenError, BitgenRawError } from './error.js'
+export { BitgenError } from './error.js'
 export type {
   // Config
   BitgenConfig,
